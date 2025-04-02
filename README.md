@@ -144,7 +144,7 @@
 
 ```java
 // Write new data to a file
-public static boolean writeToFile(String fileName, String data);
+public static boolean writeToFile(String fileName, boolean append, String data);
 ```
 
 ```java
@@ -166,7 +166,7 @@ public class ExampleWrite {
         String fileName = "users.txt";
         String data = "U001, user1@example.com, John Doe, 25, 1234567890, Male, password123";
 
-        boolean isWritten = FileHandler.writeToFile(fileName, data);
+        boolean isWritten = FileHandler.writeToFile(fileName, true, data);
         
         if (isWritten) {
             System.out.println("Data successfully written to " + fileName);
