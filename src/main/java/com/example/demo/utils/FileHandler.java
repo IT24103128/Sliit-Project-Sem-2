@@ -44,7 +44,7 @@ public class FileHandler {
 
     public static String[] readFromFile(String fileName) {
         if (!isFileExist(fileName)) {
-            return "";
+            return new String[0];
         }
         String data = "";
 
