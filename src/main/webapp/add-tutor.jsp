@@ -1,0 +1,73 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: KHThi
+  Date: 4/2/2025
+  Time: 8:13 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Add New Tutor</title>
+    <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/add-tutor.css">
+</head>
+<body>
+<div class="header">Home Tutor Booking</div>
+<h2>Enter Tutor Details</h2>
+<form action="add-tutor" method="POST">
+    <table>
+        <tr>
+            <th><label for="email">Email</label></th>
+            <th>:</th>
+            <td><input type="email" id="email" name="email" required></td>
+        </tr>
+        <tr>
+            <th><label for="name">Name</label></th>
+            <th>:</th>
+            <td><input type="text" id="name" name="name" required></td>
+        </tr>
+
+        <tr>
+            <th><label for="contact-no">Phone No.</label></th>
+            <th>:</th>
+            <td><input type="tel" id="contact-no" name="contact-no" required></td>
+        </tr>
+
+        <tr>
+            <th><label for="age">Age</label></th>
+            <th>:</th>
+            <td><input type="number" id="age" name="age" min="1" max="200" required></td>
+        </tr>
+
+        <tr>
+            <th><label for="gender">Gender</label></th>
+            <th>:</th>
+            <td id="gender">
+                <input type="radio" name="gender" value="male" required> Male
+                <input type="radio" name="gender" value="female" required> Female
+            </td>
+        </tr>
+
+        <tr>
+            <th><label for="subject">Subject</label></th>
+            <th>:</th>
+            <td><input type="text" id="subject" name="subject" required></td>
+        </tr>
+
+        <tr>
+            <th><label for="subject-expertise">Subject Expertise</label></th>
+            <th>:</th>
+            <td><input type="number" id="subject-expertise" name="subject-expertise" min="0" max="5" required></td>
+        </tr>
+
+        <tr>
+            <th><label for="cost-per-hour">Cost per Hour</label></th>
+            <th>:</th>
+            <td><input type="number" id="cost-per-hour" name="cost-per-hour" min="1" required></td>
+        </tr>
+    </table>
+    <input type="submit" value="Add Tutor">
+</form>
+
+</body>
+</html>
