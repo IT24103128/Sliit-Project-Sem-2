@@ -37,11 +37,20 @@ public class Tutor extends User {
         this.costPerHour = costPerHour;
     }
 
+    public double calculateCost(double hours){
+        return hours * costPerHour;
+    }
+
     @Override
     public void displayDetails() {
         super.displayDetails();
         System.out.println("Subject: " + subject);
         System.out.println("SubjectExpertise: " + subjectExpertise);
         System.out.println("CostPerHour: " + costPerHour);
+    }
+
+    @Override
+    public String toString(){
+        return id + "," + email + "," + name + "," + ContactNo + "," + age + "," + gender + "," + subject + "," + subjectExpertise + "," + costPerHour + "\n";
     }
 }

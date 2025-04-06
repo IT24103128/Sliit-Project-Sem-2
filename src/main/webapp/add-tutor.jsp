@@ -14,13 +14,15 @@
 <body>
 <div class="header">Home Tutor Booking</div>
 <h2>Enter Tutor Details</h2>
+
 <form action="add-tutor" method="POST">
     <table>
         <tr>
             <th><label for="email">Email</label></th>
             <th>:</th>
-            <td><input type="email" id="email" name="email" required></td>
+            <td> <input type="email" id="email" name="email" required> </td>
         </tr>
+
         <tr>
             <th><label for="name">Name</label></th>
             <th>:</th>

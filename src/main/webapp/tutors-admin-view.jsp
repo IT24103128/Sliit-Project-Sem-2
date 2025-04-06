@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="header">Home Tutor Booking</div>
-<h2> List of Tutors</h2>
+<h2> Tutors </h2>
 
 <table>
     <thead>
@@ -69,13 +69,13 @@
 <script>
     function editTutor(tutorId) {
         if (confirm("Are you sure you want to edit this tutor?")) {
-            window.location.href = "tutor-edit-redirect?id=" + tutorId;
+            window.location.href = "update-tutor.jsp?tutorID=" + tutorId;
         }
     }
 
     function removeTutor(tutorId) {
         if (confirm("Are you sure you want to remove this tutor?")) {
-            window.location.href = "remove-tutor?id=" + tutorId;
+            window.location.href = "remove-tutor?tutorID=" + tutorId;
         }
     }
 </script>

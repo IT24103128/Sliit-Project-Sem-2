@@ -7,6 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="com.example.demo.models.Tutor" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.example.demo.services.TutorsManager" %>
 <html>
 <head>
     <title>Add New Tutor</title>
@@ -15,7 +17,18 @@
 <body>
 <div class="header">Home Tutor Booking</div>
 <h2>Update Tutor Details</h2>
-<% Tutor tutor = (Tutor) session.getAttribute("tutor");%>
+<%
+    int tutorID = Integer.parseInt((String) request.getParameter("tutorID"));
+    ArrayList<Tutor> tutors = (ArrayList<Tutor>) session.getAttribute("tutors");
+    Tutor tutor = TutorsManager.findTutor(tutorID);
+    if (tutor == null) {
+%>
+<h2>Something went wrong!</h2>
+<%
+        return;
+    }
+%>
+
 <form action="update-tutor" method="POST">
     <h1>Tutor ID : <%=tutor.getID() %> </h1>
     <input type="hidden" name="id" value="<%= tutor.getID()%>">

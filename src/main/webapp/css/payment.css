@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #1e88e5;
+    --secondary-color: #42a5f5;
+    --background-color: #e3f2fd;
+    --hover-color: #1565c0;
+    --border-color: #90caf9;
+    --success-color: #4CAF50;
+    --success-hover: #388e3c;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-top: 40px ;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.payment-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.tutor-details{
+    align-items: center;
+    display: flex;
+    margin: 40px auto;
+    gap: 60px;
+}
+
+.tutor-details h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.tutor-details p {
+    margin: 6px 0;
+    color: #333;
+}
+
+.form-group {
+    margin: 15px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="submit"],
+button.btn-pay {
+    background-color: var(--success-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+input[type="submit"]:hover,
+button.btn-pay:hover {
+    background-color: var(--success-hover);
+}
+
+.calculated-cost {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #444;
+}

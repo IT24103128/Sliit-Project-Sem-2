@@ -1,8 +1,6 @@
 package com.example.demo.services;
-
 import com.example.demo.models.Tutor;
 import com.example.demo.utils.FileHandler;
-
 import java.util.ArrayList;
 
 public class TutorsManager {
@@ -51,11 +49,11 @@ public class TutorsManager {
             String subject, int subjectExpertise, double costPerHour) {
         // Create new tutor object
         Tutor tutor = new Tutor(id, email, name, contactNo, age, gender, subject, subjectExpertise, costPerHour);
+        // insert to tutors array list
         tutors.add(tutor);
 
         // Create string for writing to file
-        String tutorDetails = id + "," + email + "," + name + "," + contactNo + "," + age + "," + gender + "," + subject  + "," + subjectExpertise+ "," + costPerHour + "\n";
-        FileHandler.writeToFile(fileName, true, tutorDetails);
+        FileHandler.writeToFile(fileName, true, tutor.toString());
     }
 
     public static void removeTutor(int id) {
@@ -85,13 +83,8 @@ public class TutorsManager {
         // Update the file
         String tutorsDetails = "";
         for (Tutor tutor : tutors) {
-            String tutorDetails = tutor.getID() + "," + tutor.getEmail() + "," + tutor.getName() + "," + tutor.getContactNo() +
-                    "," + tutor.getAge() + "," + tutor.getGender() + "," + tutor.getSubject() + "," + tutor.getSubjectExpertise() + "," +
-                    tutor.getCostPerHour();
-
-            tutorsDetails += tutorDetails + "\n";
+            tutorsDetails += tutor.toString();
         }
-
         FileHandler.writeToFile(fileName, false, tutorsDetails);
     }
 
