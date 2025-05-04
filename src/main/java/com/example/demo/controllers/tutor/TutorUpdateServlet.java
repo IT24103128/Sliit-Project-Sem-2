@@ -14,7 +14,7 @@ public class TutorUpdateServlet extends HttpServlet {
         TutorsManager.readTutors();
 
         // Get tutor details
-        int id = Integer.parseInt(request.getParameter("id"));
+        int ID = Integer.parseInt(request.getParameter("id"));
         String email = request.getParameter("email");
         String name = request.getParameter("name");
         String contactNo = request.getParameter("contact-no");
@@ -25,8 +25,8 @@ public class TutorUpdateServlet extends HttpServlet {
         double costPerHour = Double.parseDouble(request.getParameter("cost-per-hour"));
 
         // update tutor details
-        TutorsManager.updateTutor(id, email, name, contactNo, age, gender, subject, subjectExpertise, costPerHour);
+        TutorsManager.updateTutor(ID, email, name, contactNo, age, gender, subject, subjectExpertise, costPerHour);
 
-        response.sendRedirect("tutors-admin-view");
+        response.sendRedirect("pages/tutor/admin-view.jsp");
     }
 }

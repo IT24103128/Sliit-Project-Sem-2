@@ -18,10 +18,16 @@ public class TutorsSortServlet extends HttpServlet {
 
         TutorsManager.readTutors();
 
-        ArrayList<Tutor> sortedTutors = (ArrayList<Tutor>)TutorsManager.getTutors().clone();
-        MergeSort.mergeSort(sortedTutors);
         HttpSession session = request.getSession();
-        session.setAttribute("tutors", sortedTutors);
-        request.getRequestDispatcher("/tutors-user-view.jsp").forward(request, response);
+
+        ArrayList<Tutor> visibleTutors = (ArrayList<Tutor>)session.getAttribute("tutors");
+        if  (visibleTutors == null) {
+            visibleTutors = TutorsManager.getTutorsAsArrayList();
+        }
+        visibleTutors = (ArrayList<Tutor>)visibleTutors.clone();
+        MergeSort.mergeSort(visibleTutors);
+
+        session.setAttribute("tutors", visibleTutors);
+        request.getRequestDispatcher("pages/tutor/user-view.jsp").forward(request, response);
     }
 }

@@ -12,4 +12,5 @@ public class Node {
         System.out.print("{" + iData);
         dData.displayDetails();
     }
+
 }

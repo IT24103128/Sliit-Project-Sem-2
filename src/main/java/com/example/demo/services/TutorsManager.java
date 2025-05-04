@@ -1,18 +1,20 @@
 package com.example.demo.services;
+import com.example.demo.dsa.BinaryTree;
+import com.example.demo.dsa.Node;
 import com.example.demo.models.Tutor;
 import com.example.demo.utils.FileHandler;
 import java.util.ArrayList;
 
 public class TutorsManager {
-    private static ArrayList<Tutor> tutors = null;
+    private static BinaryTree tutors = null;
     private static final String fileName = "tutors.txt";
-    private static int id = 0;
+    private static int ID = 0;
 
     public static void readTutors() {
         if (tutors != null)
             return;
 
-        tutors =  new ArrayList<>();
+        tutors =  new BinaryTree();
         // Read all tutors from file
         String[] tutorsDataArr = FileHandler.readFromFile(fileName);
         // initialize id with 0
@@ -31,26 +33,18 @@ public class TutorsManager {
             double costPerHour = Double.parseDouble(tutorDataArr[8]);
             // Create Tutor object
             Tutor tutor = new Tutor(tutorID, email, name, contactNo, age, gender, subject, subjectExpertise, costPerHour);
-            tutors.add(tutor); // Append tutor to arrayList
+            tutors.insert(tutorID, tutor); // Append tutor to arrayList
         }
-        id = tutorID; // set last tutor id to id
+        ID = tutorID; // set last tutor id to id
     }
 
-    public static Tutor findTutor(int id) {
-        for (Tutor tutor : tutors) {
-            if (tutor.getID() == id) {
-                return tutor;
-            }
-        }
-        return null;
-    }
 
     public static void addTutor(int id, String email, String name, String contactNo, int age, String gender,
             String subject, int subjectExpertise, double costPerHour) {
         // Create new tutor object
         Tutor tutor = new Tutor(id, email, name, contactNo, age, gender, subject, subjectExpertise, costPerHour);
         // insert to tutors array list
-        tutors.add(tutor);
+        tutors.insert(id, tutor);
 
         // Create string for writing to file
         FileHandler.writeToFile(fileName, true, tutor.toString());
@@ -58,13 +52,16 @@ public class TutorsManager {
 
     public static void removeTutor(int id) {
         // Remove tutor from array list
-        tutors.remove(findTutor(id));
+        Tutor removeTutor = tutors.findTutor(id);
+        if (removeTutor != null){
+            tutors.remove(id);
+        }
         saveTutorsToFile();
     }
 
     public static void updateTutor(int id, String email, String name, String contactNo, int age, String gender,
             String subject, int subjectExpertise, double costPerHour) {
-        Tutor foundTutor = findTutor(id);
+        Tutor foundTutor = tutors.findTutor(id);
         if (foundTutor != null) {
             foundTutor.setEmail(email);
             foundTutor.setName(name);
@@ -79,21 +76,25 @@ public class TutorsManager {
         saveTutorsToFile();
     }
 
-    public static void saveTutorsToFile(){
-        // Update the file
-        String tutorsDetails = "";
-        for (Tutor tutor : tutors) {
-            tutorsDetails += tutor.toString();
-        }
-        FileHandler.writeToFile(fileName, false, tutorsDetails);
+
+    public static void saveTutorsToFile() {
+        StringBuilder tutorsStringBuilder = new StringBuilder();
+        tutors.inOrderTraversalToString(tutors.getRoot(), tutorsStringBuilder);
+        FileHandler.writeToFile(fileName, false, tutorsStringBuilder.toString());
     }
 
     public static int getNextID() {
-        return ++id;
+        return ++ID;
     }
 
-    public static ArrayList<Tutor> getTutors() {
-        return tutors;
+    public static ArrayList<Tutor> getTutorsAsArrayList() {
+        ArrayList<Tutor> list = new ArrayList<>();
+        tutors.inOrderTraversalToList(tutors.getRoot(), list);
+        return list;
+    }
+
+    public static Tutor findTutor(int id) {
+        return tutors.findTutor(id);
     }
 
 }

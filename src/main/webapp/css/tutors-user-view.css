@@ -9,6 +9,7 @@
     --profile-card-hover: #e5fdff
 }
 
+
 body {
     font-family: Arial, sans-serif;
     background-color: var(--background-color);
@@ -16,58 +17,11 @@ body {
     padding: 0;
 }
 
+
 h2 {
     margin-top: 40px ;
     color: var(--primary-color);
     text-align: center;
-}
-
-.header {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 20px;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-th, td {
-    padding: 18px; /* Bigger Rows */
-    text-align: left;
-    border-bottom: 1px solid var(--border-color);
-}
-
-th {
-    background-color: var(--primary-color);
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9; /* Soft gray for better contrast */
-}
-
-tr:hover {
-    background-color: var(--hover-color);
-}
-
-td {
-    font-size: 16px;
-    color: #333;
-}
-
-td:first-child {
-    font-weight: bold;
 }
 
 /* Button Styling */
@@ -79,24 +33,6 @@ button {
     border-radius: 4px;
     cursor: pointer;
     transition: 0.3s;
-}
-
-.btn-edit {
-    background-color: var(--button-edit);
-    color: white;
-}
-
-.btn-edit:hover {
-    background-color: #ff9800;
-}
-
-.btn-remove {
-    background-color: var(--button-remove);
-    color: white;
-}
-
-.btn-remove:hover {
-    background-color: #b71c1c;
 }
 
 .tutors{
@@ -115,8 +51,10 @@ button {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
 .profile-card:hover {
     background-color: var(--profile-card-hover);
+    transform: translateY(-5px);
 }
 
 
@@ -126,7 +64,7 @@ button {
     border-radius: 50%;
 }
 
-.btn-book, .btn-search, .btn-reset, .btn-sort{
+.btn-book, .btn-search, .btn-reset, .btn-sort, .btn-view-profile{
     width: 100%;
     padding: 8px;
     margin: 0 5px 0 5px;
@@ -134,11 +72,11 @@ button {
     color: white;
 }
 
-.btn-book, .btn-search, .btn-sort {
+.btn-book, .btn-search, .btn-sort, .btn-view-profile {
     background-color: var(--secondary-color);
 }
 
-.btn-book:hover, .btn-sort:hover, .btn-search:hover {
+.btn-book:hover, .btn-sort:hover, .btn-search:hover, .btn-view-profile:hover {
     background-color: var(--hover-color);
 }
 
@@ -148,6 +86,10 @@ button {
 
 .btn-reset:hover{
     background-color: var(--button-remove);
+}
+
+.btn-view-profile{
+    margin-bottom: 6px;
 }
 
 .controls {

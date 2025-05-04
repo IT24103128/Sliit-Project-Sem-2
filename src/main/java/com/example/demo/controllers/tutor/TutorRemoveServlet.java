@@ -10,17 +10,17 @@ import java.io.IOException;
 
 @WebServlet(name = "RemoveTutorServlet", value = "/remove-tutor")
 public class TutorRemoveServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         TutorsManager.readTutors();
 
         // Get tutor id
-        int tutorID = Integer.parseInt(request.getParameter("tutorID"));
+        int tutorID = Integer.parseInt(request.getParameter("tutor-id"));
 
         // Remove tutor
         TutorsManager.removeTutor(tutorID);
 
-        response.sendRedirect("tutors-admin-view");
+        response.sendRedirect("pages/tutor/admin-view.jsp");
     }
 }

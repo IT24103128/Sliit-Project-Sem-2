@@ -5,9 +5,9 @@ public class Tutor extends User {
     private int subjectExpertise;
     private double costPerHour;
 
-    public Tutor(int id, String email, String name, String contactNo, int age,
-            String gender, String subject, int subjectExpertise, double costPerHour) {
-        super(id, email, "", name, contactNo, age, gender);
+    public Tutor(int ID, String email, String name, String contactNo, int age,
+                 String gender, String subject, int subjectExpertise, double costPerHour) {
+        super(ID, email, "", name, contactNo, age, gender);
         this.subject = subject;
         this.subjectExpertise = subjectExpertise;
         this.costPerHour = costPerHour;
@@ -51,6 +51,6 @@ public class Tutor extends User {
 
     @Override
     public String toString(){
-        return id + "," + email + "," + name + "," + ContactNo + "," + age + "," + gender + "," + subject + "," + subjectExpertise + "," + costPerHour + "\n";
+        return ID + "," + email + "," + name + "," + ContactNo + "," + age + "," + gender + "," + subject + "," + subjectExpertise + "," + costPerHour + "\n";
     }
 }

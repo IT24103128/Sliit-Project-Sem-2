@@ -15,7 +15,7 @@ public class TutorAddServlet extends HttpServlet {
         TutorsManager.readTutors();
 
         // Get tutor details
-        int id = TutorsManager.getNextID();
+        int ID = TutorsManager.getNextID();
         String email = request.getParameter("email");
         String name = request.getParameter("name");
         String contactNo = request.getParameter("contact-no");
@@ -26,8 +26,8 @@ public class TutorAddServlet extends HttpServlet {
         double costPerHour = Double.parseDouble(request.getParameter("cost-per-hour"));
 
         // Save new tutor
-        TutorsManager.addTutor(id, email, name, contactNo, age, gender, subject, subjectExpertise, costPerHour);
+        TutorsManager.addTutor(ID, email, name, contactNo, age, gender, subject, subjectExpertise, costPerHour);
 
-        response.sendRedirect("admin-dashboard.jsp");
+        response.sendRedirect("pages/tutor/admin-view.jsp");
     }
 }

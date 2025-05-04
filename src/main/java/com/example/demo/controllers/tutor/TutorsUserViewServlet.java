@@ -18,11 +18,11 @@ public class TutorsUserViewServlet extends HttpServlet {
         TutorsManager.readTutors();
 
         // get all tutors
-        ArrayList<Tutor> tutors = TutorsManager.getTutors();
+        ArrayList<Tutor> tutors = TutorsManager.getTutorsAsArrayList();
 
         // Forward to the view-tutors.jsp
         HttpSession session = request.getSession();
         session.setAttribute("tutors", tutors);
-        request.getRequestDispatcher("/tutors-user-view.jsp").forward(request, response);
+        response.sendRedirect("pages/tutor/user-view.jsp");
     }
 }

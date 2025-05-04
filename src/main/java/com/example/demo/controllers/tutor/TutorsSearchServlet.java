@@ -21,7 +21,7 @@ public class TutorsSearchServlet extends HttpServlet {
         String subjectName = request.getParameter("subject");
         ArrayList<Tutor> tutors = new ArrayList<>();
 
-        for (Tutor tutor : TutorsManager.getTutors()) {
+        for (Tutor tutor : TutorsManager.getTutorsAsArrayList()) {
             // Remove all spaces in subject name
             String tutorSubject = tutor.getSubject().replaceAll(" ", "");
             if (tutorSubject.equalsIgnoreCase(subjectName)){
@@ -33,7 +33,7 @@ public class TutorsSearchServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.setAttribute("tutors", tutors);
 
-        request.getRequestDispatcher("tutors-user-view.jsp").forward(request, response);
+        request.getRequestDispatcher("pages/tutor/user-view.jsp").forward(request, response);
 
     }
 }
