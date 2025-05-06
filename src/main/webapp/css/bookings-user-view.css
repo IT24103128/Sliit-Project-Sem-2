@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #1e88e5;
+    --secondary-color: #42a5f5;
+    --background-color: #f5f5f5;
+    --hover-color: #e0e0e0;
+    --border-color: #ddd;
+    --button-edit: #ffb300;
+    --button-remove: #d32f2f;
+    --profile-card-hover: #e5fdff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    margin-top: 40px ;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.booking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.booking-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 24px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.booking-card:hover {
+    background-color: var(--profile-card-hover);
+    transform: translateY(-2px);
+}
+
+.booking-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.booking-image img {
+    width: 140px;
+    height: 140px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.booking-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.booking-details h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.booking-details p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.highlight {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn-cancel,
+.btn-edit{
+    width: 100px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin: 6px 6px 0 0;
+}
+
+.btn-cancel {
+    background-color: var(--button-remove);
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #b71c1c;
+    transform: scale(1.02);
+}
+
+.btn-edit {
+    background-color: var(--button-edit);
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #f57c00;
+    transform: scale(1.02);
+}
