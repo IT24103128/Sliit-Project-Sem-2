@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.util.Arrays;
 
 public class FileHandler {
     public static boolean isFileExist(String fileName) {
@@ -24,10 +23,14 @@ public class FileHandler {
     }
 
     public static boolean writeToFile(String fileName, boolean append, String data) {
-        boolean fileCreated = true;
+        boolean fileCreated = false;
+
         if (!isFileExist(fileName)) {
             fileCreated = createFile(fileName);
+        } else{
+            fileCreated = true;
         }
+
         if (fileCreated) {
             try {
                 FileWriter fileWriter = new FileWriter(fileName, append);
@@ -53,18 +56,24 @@ public class FileHandler {
             FileReader fileReader = new FileReader(fileName);
             BufferedReader bufferReaderFile = new BufferedReader(fileReader);
             String line;
-            while ((line = bufferReaderFile.readLine()) != null) {
-                data = data + line + "\n";
+            while (true) {
+                line = bufferReaderFile.readLine();
+                if (line == null) {break;}
+                else {
+                    data = data + line + "\n";
+                }
             }
             fileReader.close();
             bufferReaderFile.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            return new String[0];
         }
 
         if (data.isEmpty()){
             return new String[0];
         }
+
         return data.split("\n");
     }
 }
