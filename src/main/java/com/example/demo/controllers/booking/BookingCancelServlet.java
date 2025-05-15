@@ -8,6 +8,8 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
+
+
 @WebServlet(name = "CancelBookingServlet", value = "/cancel-booking")
 public class BookingCancelServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

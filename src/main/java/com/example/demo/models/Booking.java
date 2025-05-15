@@ -1,5 +1,6 @@
 package com.example.demo.models;
 
+
 public class Booking {
     private int ID;
     private int userID;
@@ -64,6 +65,6 @@ public class Booking {
 
     @Override
     public String toString() {
-        return  ID + "," + userID + "," + tutorID + "," + duration + "," + date + "," + time + "\n";
+        return ID + "," + userID + "," + tutorID + "," + duration + "," + date + "," + time + "\n";
     }
 }
