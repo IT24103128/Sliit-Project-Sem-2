@@ -9,6 +9,7 @@ public class User {
     protected int age;
     protected String gender;
 
+    
     public User(int ID, String email, String password, String name, String contactNo, int age, String gender) {
         this.ID = ID;
         this.email = email;
