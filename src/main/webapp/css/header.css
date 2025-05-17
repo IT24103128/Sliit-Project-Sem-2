@@ -6,6 +6,7 @@
 }
 
 
+
 .header {
     display: flex;
     justify-content: space-between; /* Push title left, nav right */
@@ -13,6 +14,7 @@
     padding: 10px;
     background-color: var(--secondary-color);
 }
+
 
 .header-title{
     font-size: 30px;

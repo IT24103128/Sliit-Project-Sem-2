@@ -1,5 +1,6 @@
 package com.example.demo.models;
 
+
 public class Admin {
     private int ID;
     private String email;
@@ -42,6 +43,7 @@ public class Admin {
         this.contactNo = contactNo;
     }
 
+    
     public String getName() {
         return name;
     }
@@ -60,6 +62,7 @@ public class Admin {
 
     
     public void displayDetails() {
+        
         System.out.println("ID: " + ID);
         System.out.println("Email: " + email);
         System.out.println("Password: " + password);
