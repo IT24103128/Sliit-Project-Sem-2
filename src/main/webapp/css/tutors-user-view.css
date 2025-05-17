@@ -1,0 +1,113 @@
+:root {
+    --primary-color: #1e88e5;
+    --secondary-color: #42a5f5;
+    --background-color: #f5f5f5;
+    --hover-color: #e0e0e0;
+    --border-color: #ddd;
+    --button-edit: #ffb300;
+    --button-remove: #d32f2f;
+    --profile-card-hover: #e5fdff
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+
+h2 {
+    margin-top: 40px ;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tutors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-card {
+    width: fit-content;
+    height: fit-content;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-card:hover {
+    background-color: var(--profile-card-hover);
+    transform: translateY(-5px);
+}
+
+
+.profile-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.btn-book, .btn-search, .btn-reset, .btn-sort, .btn-view-profile{
+    width: 100%;
+    padding: 8px;
+    margin: 0 5px 0 5px;
+    border-radius: 4px;
+    color: white;
+}
+
+.btn-book, .btn-search, .btn-sort, .btn-view-profile {
+    background-color: var(--secondary-color);
+}
+
+.btn-book:hover, .btn-sort:hover, .btn-search:hover, .btn-view-profile:hover {
+    background-color: var(--hover-color);
+}
+
+.btn-reset{
+    background-color: var(--button-edit);
+}
+
+.btn-reset:hover{
+    background-color: var(--button-remove);
+}
+
+.btn-view-profile{
+    margin-bottom: 6px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.controls form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
