@@ -7,6 +7,7 @@ public class Payment {
     private String date;
     private String time;
     private double amount;
+    
 
     public Payment(int ID, int bookingID, int userID, String date, String time, double amount) {
         this.ID = ID;
@@ -19,6 +20,7 @@ public class Payment {
 
     public int getID() {
         return ID;
+        
     }
 
     public void setID(int ID) {
@@ -74,6 +76,7 @@ public class Payment {
         System.out.println("Amount: " + amount);
     }
 
+    
     @Override
     public String toString() {
         return ID + "," + bookingID + "," + userID + "," + date + "," + time + "," + amount + "\n";
