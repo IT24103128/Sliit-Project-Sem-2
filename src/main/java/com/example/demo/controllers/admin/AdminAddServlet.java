@@ -4,6 +4,7 @@ package com.example.demo.controllers.admin;
 
 import java.io.*;
 
+
 import com.example.demo.models.Admin;
 import com.example.demo.services.AdminManager;
 import jakarta.servlet.http.*;
@@ -22,13 +23,13 @@ public class AdminAddServlet extends HttpServlet {
                 response.sendRedirect("pages/admin/add.jsp");
                 return;
             };
-
         }
 
         String password = request.getParameter("password");
         String name = request.getParameter("name");
         String contactNo = request.getParameter("contact-no");
         int ID = AdminManager.getNextID();
+        
 
         AdminManager.addAdmin(ID, email, password, name, contactNo);
 
