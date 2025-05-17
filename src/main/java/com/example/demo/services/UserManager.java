@@ -2,7 +2,6 @@ package com.example.demo.services;
 
 import com.example.demo.models.User;
 import com.example.demo.utils.FileHandler;
-
 import java.util.ArrayList;
 
 public class UserManager {
@@ -35,6 +34,7 @@ public class UserManager {
         ID = userID;
     }
 
+    
     public static User findUser(int id) {
         for (User user : users) {
             if (user.getID() == id) {
