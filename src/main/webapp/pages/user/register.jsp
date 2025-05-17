@@ -92,6 +92,7 @@
     </table>
 
 
+
     <p class="error-message">
         <% String error = (String)session.getAttribute("email-already-used");
             if (error != null ) { %>
