@@ -34,6 +34,7 @@ public class UserLoginServlet extends HttpServlet {
             }
         }
 
+                
         HttpSession session = request.getSession();
         if (loggedUser == null){
             session.setAttribute("email-password-incorrect", "Email or password incorrect..!");
