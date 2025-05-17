@@ -15,6 +15,7 @@ public class Admin {
         this.contactNo = contactNo;
     }
 
+    
     public int getID() {
         return ID;
     }
@@ -55,12 +56,14 @@ public class Admin {
         this.password = password;
     }
 
+    
     public void displayDetails() {
         System.out.println("ID: " + ID);
         System.out.println("Email: " + email);
         System.out.println("Password: " + password);
         System.out.println("Name: " + name);
         System.out.println("Contact No: " + contactNo);
+        
     }
 
     public String toString(){
