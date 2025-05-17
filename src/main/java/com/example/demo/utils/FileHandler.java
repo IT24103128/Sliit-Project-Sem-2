@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 
+
 public class FileHandler {
     public static boolean isFileExist(String fileName) {
         File file = new File(fileName);
@@ -44,6 +45,7 @@ public class FileHandler {
         } else {
             return false;
         }
+        
     }
 
     public static String[] readFromFile(String fileName) {
@@ -73,6 +75,7 @@ public class FileHandler {
         if (data.isEmpty()){
             return new String[0];
         }
+        
 
         return data.split("\n");
     }
