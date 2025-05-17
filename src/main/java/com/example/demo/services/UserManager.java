@@ -2,7 +2,6 @@ package com.example.demo.services;
 
 import com.example.demo.models.User;
 import com.example.demo.utils.FileHandler;
-
 import java.util.ArrayList;
 
 public class UserManager {
