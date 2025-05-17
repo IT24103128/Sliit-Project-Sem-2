@@ -76,6 +76,7 @@ public class Payment {
         System.out.println("Amount: " + amount);
     }
 
+    
     @Override
     public String toString() {
         return ID + "," + bookingID + "," + userID + "," + date + "," + time + "," + amount + "\n";
