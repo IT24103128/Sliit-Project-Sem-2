@@ -17,8 +17,8 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<head>  
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="<%= request.getContextPath() %>/css/user-login.css">
@@ -33,9 +33,9 @@
         </div>
         <div>
             <nav>
-                <a class="nav-btn-clicked" href="index.jsp">User Login</a>
-                <a class="nav-btn" href="pages/user/register.jsp">User Register</a>
-                <a class="nav-btn" href="pages/admin/login.jsp">Admin Login</a>
+                 <a class="nav-btn-clicked" href="index.jsp">User Login</a>
+                 <a class="nav-btn" href="pages/user/register.jsp">User Register</a>
+                 <a class="nav-btn" href="pages/admin/login.jsp">Admin Login</a>
             </nav>
         </div>
     </div>
