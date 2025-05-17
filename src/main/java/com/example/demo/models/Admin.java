@@ -7,6 +7,7 @@ public class Admin {
     private String password;
     private String name;
     private String contactNo;
+    
 
     public Admin(int ID, String email, String password, String name, String contactNo) {
         this.ID = ID;
@@ -14,8 +15,10 @@ public class Admin {
         this.password = password;
         this.name = name;
         this.contactNo = contactNo;
+        
     }
 
+    
     public int getID() {
         return ID;
     }
@@ -57,6 +60,7 @@ public class Admin {
         this.password = password;
     }
 
+    
     public void displayDetails() {
         
         System.out.println("ID: " + ID);
@@ -64,6 +68,7 @@ public class Admin {
         System.out.println("Password: " + password);
         System.out.println("Name: " + name);
         System.out.println("Contact No: " + contactNo);
+        
     }
 
     public String toString(){

@@ -3,6 +3,7 @@ import com.example.demo.models.Review;
 import com.example.demo.utils.FileHandler;
 import java.util.ArrayList;
 
+
 public class ReviewManager {
     private static ArrayList<Review> reviews = null;
     private static final String fileName = "reviews.txt";
@@ -33,6 +34,7 @@ public class ReviewManager {
         }
         ID = reviewId; // set last review id to id
     }
+    
 
     public static Review findReview(int id) {
         for (Review review : reviews) {

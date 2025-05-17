@@ -3,6 +3,7 @@ package com.example.demo.services;
 import com.example.demo.models.Admin;
 import com.example.demo.utils.FileHandler;
 
+
 import java.util.ArrayList;
 
 public class AdminManager {
@@ -32,6 +33,7 @@ public class AdminManager {
 
             Admin admin = new Admin(adminID, email, password, name, contactNo);
             admins.add(admin);
+            
         }
 
         ID = adminID;
@@ -48,6 +50,7 @@ public class AdminManager {
 
     public static void addAdmin(int id, String email, String password, String name,
                                 String contactNo) {
+        
         Admin admin = new Admin(id, email, password, name, contactNo);
         admins.add(admin);
         FileHandler.writeToFile(fileName, true, admin.toString());
@@ -57,6 +60,7 @@ public class AdminManager {
         admins.remove(findAdmin(id));
         saveAdminsToFile();
     }
+    
 
     public static void updateAdmin(int id, String email, String password, String name,
                                    String contactNo) {
