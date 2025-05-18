@@ -9,7 +9,7 @@ public class Payment {
     private double amount;
     
 
-    public Payment(int ID, int bookingID, int userID, String date, String time, double amount) {
+    public Payment(int ID, int bookingID, int userID, String date, String time, double amount){
         this.ID = ID;
         this.bookingID = bookingID;
         this.userID = userID;
