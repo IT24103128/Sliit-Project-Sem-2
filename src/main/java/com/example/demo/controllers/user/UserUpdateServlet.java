@@ -25,7 +25,6 @@ public class UserUpdateServlet extends HttpServlet {
 
         UserManager.updateUser(id, email, password, name, contactNo, age, gender);
 
-
         response.sendRedirect("pages/user/profile-view.jsp");
     }
 }
