@@ -1,0 +1,170 @@
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-transparent: rgba(30, 41, 59, 0.9);
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --accent: #60a5fa;
+    --accent-hover: #93c5fd;
+    --border: rgba(148, 163, 184, 0.2);
+    --error: #f87171;
+    --warning: #fbbf24;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-top: 40px;
+    color: var(--accent);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.booking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.tutor-details {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--bg-transparent);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    width: 100%;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(5px);
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 15px rgba(77, 184, 255, 0.3);
+}
+
+.tutor-details h3 {
+    color: var(--accent);
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    color: var(--text-secondary);
+    font-weight: 500;
+    width: 150px;
+}
+
+form {
+    background-color: var(--bg-transparent);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(5px);
+}
+
+input[type="time"],
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="time"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(77, 184, 255, 0.2);
+}
+
+.calculated-cost {
+    margin: 25px 0 15px;
+    font-size: 1.2rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.btn-pay {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-pay:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .tutor-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    table {
+        margin: 0 auto;
+    }
+
+    th, td {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    th {
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+
+    td {
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+}
