@@ -1,0 +1,144 @@
+:root {
+    --admin-accent: #f87171;
+    --admin-accent-hover: #fca5a5;
+    --admin-accent-light: rgba(248, 113, 113, 0.1);
+    --admin-accent-medium: rgba(248, 113, 113, 0.2);
+    --bg-primary: #18377e;
+    --bg-secondary: #1e293b;
+    --bg-transparent: rgba(30, 41, 59, 0.9);
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --border: rgba(148, 163, 184, 0.2);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h2 {
+    color: var(--admin-accent);
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.edit-tutor-form {
+    background-color: var(--bg-transparent);
+    backdrop-filter: blur(8px);
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    color: var(--admin-accent);
+    font-weight: 500;
+    width: 30%;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--admin-accent);
+    box-shadow: 0 0 0 2px var(--admin-accent-light);
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    margin-left: 15px;
+    accent-color: var(--admin-accent);
+    transform: scale(1.2);
+}
+
+.update-tutor-submit-btn {
+    background-color: var(--admin-accent);
+    color: var(--bg-primary);
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+.update-tutor-submit-btn:hover {
+    background-color: var(--admin-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(248, 113, 113, 0.3);
+}
+
+#gender {
+    padding: 12px 0;
+}
+
+@media (max-width: 768px) {
+    .edit-tutor-form {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    th, td {
+        padding: 10px 12px;
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        padding-bottom: 0.5rem;
+        border-bottom: none;
+    }
+
+    td {
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+    }
+
+    input[type="radio"] {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+}
