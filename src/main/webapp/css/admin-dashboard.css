@@ -1,0 +1,173 @@
+:root {
+    --admin-accent: #f87171;
+    --admin-accent-hover: #fca5a5;
+    --admin-accent-light: rgba(248, 113, 113, 0.1);
+    --admin-accent-medium: rgba(248, 113, 113, 0.2);
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-transparent: rgba(30, 41, 59, 0.9);
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --border: rgba(148, 163, 184, 0.2);
+    --button-edit: #fbbf24;
+    --button-edit-hover: #f59e0b;
+    --button-remove: #ef4444;
+    --button-remove-hover: #dc2626;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h2 {
+    color: var(--admin-accent);
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+table {
+    width: 96%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background: var(--bg-transparent);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+th, td {
+    padding: 16px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background-color: var(--admin-accent);
+    color: var(--bg-primary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(30, 41, 59, 0.6);
+}
+
+tr:hover {
+    background-color: var(--admin-accent-light);
+}
+
+td {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+button, .btn-edit, .btn-remove{
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-edit {
+    background-color: var(--button-edit);
+    color: var(--bg-primary);
+    min-width: 100px;
+    height: 40px;
+}
+
+.btn-edit:hover {
+    background-color: var(--button-edit-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(251, 191, 36, 0.3);
+}
+
+.btn-remove {
+    background-color: var(--button-remove);
+    color: white;
+    min-width: 100px;
+    height: 40px;
+}
+
+.btn-remove-disabled {
+    background-color: var(--button-remove);
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    min-width: 100px;
+    height: 40px;
+}
+
+.btn-remove:hover {
+    background-color: var(--button-remove-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
+.add-button {
+    margin: 1.5rem 0 0 2%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    min-width: 200px;
+    background-color: var(--admin-accent);
+    color: var(--bg-primary);
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.add-button:hover {
+    background-color: var(--admin-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(248, 113, 113, 0.3);
+}
+
+.action-button-container {
+    display: flex;
+    column-gap: 12px;
+}
+
+td[colspan] {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+@media (max-width: 1200px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    th, td {
+        padding: 12px 14px;
+        font-size: 0.85rem;
+    }
+
+    .action-button-container {
+        flex-direction: column;
+        row-gap: 8px;
+    }
+
+    .btn-edit, .btn-remove {
+        width: 100%;
+    }
+}

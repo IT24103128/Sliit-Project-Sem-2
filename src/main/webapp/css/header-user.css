@@ -1,0 +1,90 @@
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-transparent: rgba(30, 41, 59, 0.9);
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --accent: #60a5fa;
+    --accent-hover: #93c5fd;
+    --border: rgba(148, 163, 184, 0.2);
+    --error: #f87171;
+    --warning: #fbbf24;
+}
+
+.header {
+    background-color: rgba(26, 35, 50, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-title {
+    color: var(--accent);
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btn, .nav-btn-clicked {
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+.btn-logout {
+    color: #ffffff;
+    background-color: var(--error);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #dc2626;
+    box-shadow: 0 4px 10px rgba(248, 113, 113, 0.3);
+    transform: translateY(-2px);
+}
+
+.nav-btn:hover {
+    color: var(--text-primary);
+    background-color: rgba(74, 184, 255, 0.1);
+    border-color: rgba(74, 184, 255, 0.3);
+}
+
+.nav-btn-clicked {
+    color: var(--text-primary);
+    background-color: rgba(74, 184, 255, 0.2);
+    border-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    nav {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

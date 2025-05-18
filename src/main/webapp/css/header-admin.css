@@ -1,0 +1,119 @@
+:root {
+    --admin-accent: #f87171;
+    --admin-accent-hover: #fca5a5;
+    --admin-accent-light: rgba(248, 113, 113, 0.1);
+    --admin-accent-medium: rgba(248, 113, 113, 0.2);
+    --admin-accent-border: rgba(248, 113, 113, 0.3);
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-transparent: rgba(30, 41, 59, 0.9);
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --border: rgba(148, 163, 184, 0.2);
+    --error: #f87171;
+    --warning: #fbbf24;
+}
+
+.header {
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-title {
+    color: var(--admin-accent);
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.header-title::after {
+    content: "ADMIN";
+    display: inline-block;
+    background-color: var(--admin-accent);
+    color: var(--bg-primary);
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 0.15rem 0.5rem;
+    border-radius: 10px;
+    margin-left: 0.75rem;
+    vertical-align: middle;
+}
+
+.btn-logout {
+    color: #ffffff;
+    background-color: var(--error);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #dc2626;
+    box-shadow: 0 4px 10px rgba(248, 113, 113, 0.3);
+    transform: translateY(-2px);
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btn,
+.nav-btn-clicked {
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+.nav-btn:hover {
+    color: var(--text-primary);
+    background-color: var(--admin-accent-light);
+    border-color: var(--admin-accent-border);
+}
+
+.nav-btn-clicked {
+    color: var(--text-primary);
+    background-color: var(--admin-accent-medium);
+    border-color: var(--admin-accent);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-title::after {
+        margin-left: 0.5rem;
+        font-size: 0.6rem;
+    }
+}
+
+.danger-action {
+    background-color: rgba(248, 113, 113, 0.15);
+    border: 1px solid var(--admin-accent-border);
+}
