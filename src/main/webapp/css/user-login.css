@@ -1,0 +1,142 @@
+:root {
+    --admin-accent: #f87171;
+    --admin-accent-hover: #fca5a5;
+    --admin-accent-light: rgba(248, 113, 113, 0.1);
+    --admin-accent-medium: rgba(248, 113, 113, 0.2);
+    --admin-accent-border: rgba(248, 113, 113, 0.3);
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-transparent: rgba(30, 41, 59, 0.9);
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --border: rgba(148, 163, 184, 0.2);
+    --error: #f87171;
+    --warning: #fbbf24;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h2 {
+    margin: 2rem 0 1.5rem;
+    color: var(--accent);
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+form {
+    background-color: var(--bg-transparent);
+    backdrop-filter: blur(8px);
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    margin: 1rem 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    color: var(--accent);
+    font-weight: 500;
+    width: 30%;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(77, 184, 255, 0.2);
+}
+
+input[type="submit"] {
+    background-color: var(--accent);
+    color: #1a2332;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #7ac6ff;
+    transform: translateY(-2px);
+}
+
+.error-message {
+    color: var(--error);
+    font-weight: 500;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border-radius: 6px;
+    background-color: rgba(248, 113, 113, 0.15);
+    text-align: center;
+}
+
+.register-msg {
+    font-weight: 500;
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.register-msg a {
+    color: var(--accent);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.register-msg a:hover {
+    color: #7ac6ff;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    form {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    th, td {
+        padding: 8px 10px;
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        padding-top: 1rem;
+        border-bottom: none;
+    }
+}
