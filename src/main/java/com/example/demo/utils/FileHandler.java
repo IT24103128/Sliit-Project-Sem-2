@@ -7,7 +7,7 @@ import java.io.FileWriter;
 
 public class FileHandler {
     public static boolean isFileExist(String fileName) {
-        File file = new File(fileName); // Creating a file object
+        File file = new File(fileName);
         return file.exists();
     }
 
@@ -50,7 +50,6 @@ public class FileHandler {
         if (!isFileExist(fileName)) {
             return new String[0];
         }
-
         String data = "";
 
         try {
