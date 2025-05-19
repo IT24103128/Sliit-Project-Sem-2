@@ -1,7 +1,6 @@
 package com.example.demo.controllers.user;
 
 import java.io.*;
-
 import com.example.demo.models.User;
 import com.example.demo.services.UserManager;
 import jakarta.servlet.http.*;
