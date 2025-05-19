@@ -6,11 +6,12 @@ import com.example.demo.utils.FileHandler;
 import java.util.ArrayList;
 
 public class UserManager {
-    private static ArrayList<User> users = null;   //static list users stores user objects.
-    private static final String fileName = "users.txt";  //file users.txt is used for persistent storage.
-    private static int ID = 0;  //ID counter tracks the next available user ID
+    private static ArrayList<User> users = null;   // array list used stores user objects within user.
+    private static final String fileName = "users.txt";   // file users.txt is used for persistent storage.
+    private static int ID = 0;  // ID counter tracks the next available user ID
 
-    public static void readUsers() {
+    public static void readUsers() {  /* reads user data from the file users.txt, initializes the users list, and populates it with User objects */
+
         if (users != null)
             return;
 
@@ -42,7 +43,7 @@ public class UserManager {
             }
         }
         return null;
-        /*  Searches for and retrieves a User object by its ID. Returns null if no match is found */
+           /*  Searches for and retrieves a User object by its ID. Returns null if no match is found */
     }
 
     public static void addUser(int id, String email, String password, String name,
@@ -50,6 +51,7 @@ public class UserManager {
         User user = new User(id, email, password, name, contactNo, age, gender);
         users.add(user);
         FileHandler.writeToFile(fileName, true, user.toString());
+        /* Adds a new user to the users list and writes the user's details to the file */
     }
 
     public static void removeUser(int id) {
@@ -71,7 +73,9 @@ public class UserManager {
         saveUsersToFile();
     }
 
-    public static void saveUsersToFile() {
+    public static void saveUsersToFile() { 
+    /* Converts all user objects in the users list to string format and saves them to the file, overwriting its content */
+
         String userDetails = "";
         for (User user : users) {
             userDetails += user.toString();
@@ -79,7 +83,7 @@ public class UserManager {
         FileHandler.writeToFile(fileName, false, userDetails);
     }
 
-    public static int getNextID() {
+    public static int getNextID() { // increments and returns the next available ID for a new user
         ID = ID + 1;
         return ID;
     }
@@ -88,4 +92,5 @@ public class UserManager {
         return users;
     }
 }
+
 
