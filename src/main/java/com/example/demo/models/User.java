@@ -9,7 +9,7 @@ public class User {
     protected int age;
     protected String gender;
 
-    public User(int ID, String email, String password, String name, String contactNo, int age, String gender) {
+    public User(int ID, String email, String password, String name, String contactNo, int age, String gender) { 
         this.ID = ID;
         this.email = email;
         this.password = password;
@@ -85,6 +85,7 @@ public class User {
         System.out.println("Gender: " + gender);
     }
 
+    
     @Override
     public String toString() {
         return ID + "," +  email + "," + password + "," + name + "," + ContactNo + "," + age + "," + gender + "\n";
