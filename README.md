@@ -6,7 +6,7 @@
 - **Add Admin** (`add-admins.jsp`, `AddAdminServlet.java`)
 - **Edit Admin** (`update-admin.jsp`, `UpdateAdminServlet.java`)
 - **Delete Admin** (`view-admin.jsp`, `ViewAdminServlet.java`, `DeleteAdminServlet.java`)
-- **Data Storage**: `admins.txt`
+- **Data Storage**: `admins.txt`...
 - **Admin Class**:
   ```java
   class Admin {
