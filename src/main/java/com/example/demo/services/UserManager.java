@@ -42,6 +42,7 @@ public class UserManager {
             }
         }
         return null;
+        /*  Searches for and retrieves a User object by its ID. Returns null if no match is found */
     }
 
     public static void addUser(int id, String email, String password, String name,
