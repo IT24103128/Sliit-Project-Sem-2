@@ -6,8 +6,8 @@ import com.example.demo.utils.FileHandler;
 import java.util.ArrayList;
 
 public class UserManager {
-    private static ArrayList<User> users = null;
-    private static final String fileName = "users.txt";
+    private static ArrayList<User> users = null;   //A static list users stores user objects.
+    private static final String fileName = "users.txt";  //A file named users.txt is used for persistent storage.
     private static int ID = 0;  //ID counter tracks the next available user ID
 
     public static void readUsers() {
@@ -87,3 +87,4 @@ public class UserManager {
         return users;
     }
 }
+
