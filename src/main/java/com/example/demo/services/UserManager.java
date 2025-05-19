@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class UserManager {
     private static ArrayList<User> users = null;
     private static final String fileName = "users.txt";
-    private static int ID = 0;
+    private static int ID = 0;  //ID counter tracks the next available user ID
 
     public static void readUsers() {
         if (users != null)
