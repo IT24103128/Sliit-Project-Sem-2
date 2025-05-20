@@ -52,6 +52,7 @@
       <th>Date</th>
       <th>Time</th>
       <th>Amount (USD)</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -62,6 +63,12 @@
         <td><%= payment.getDate() %></td>
         <td><%= payment.getTime() %></td>
         <td>$<%= String.format("%.2f", payment.getAmount()) %></td>
+        <td>
+          <form action="<%=request.getContextPath()%>/delete-payment" method="post">
+            <input type="hidden" value="<%=payment.getID()%>" name="payment-id">
+            <input type="submit" value="Delete" class="btn-delete">
+          </form>
+        </td>
       </tr>
      <% } %>
   </tbody>

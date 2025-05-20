@@ -79,7 +79,7 @@
                     <form method="get" action="<%= request.getContextPath() %>/pages/booking/edit.jsp">
                         <input type="hidden" name="booking-id" value="<%= booking.getID() %>" />
                         <input type="hidden" name="tutor-id" value="<%= bookedTutor.getID() %>" />
-                        <input type="hidden" name="payment-id" value="<%= payment.getID() %>" />
+                        <input type="hidden" name="payment-id" value="<%= (payment != null)? payment.getID() : -1 %>" />
                         <button type="submit" class="btn-edit">Change</button>
                     </form>
                 </div>

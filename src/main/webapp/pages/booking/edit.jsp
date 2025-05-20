@@ -91,7 +91,7 @@
         <tr>
             <th><label for="fee">Fee</label></th>
             <th>:</th>
-            <td><input type="number" id="fee" name="fee" value="<%= payment.getAmount()%>" readonly></td>
+            <td><input type="number" id="fee" name="fee" value='<%= (payment != null)? payment.getAmount() : "History Removed"%>' readonly></td>
         </tr>
 
     </table>

@@ -80,8 +80,9 @@
             </table>
         </div>
     </div>
-    <form action="<%=request.getContextPath()%>/pages/payment/form.jsp" method="get" oninput="calculateCost()">
-        <input type="hidden" name="tutorID" value="<%= tutor.getID() %>">
+    <form action="<%=request.getContextPath()%>/pages/payment/form.jsp" method="get" oninput="calculateCost()"
+          class="form-booking" >
+        <input type="hidden" name="tutorID" value="<%= tutor.getID() %>"">
 
         <table>
             <tr>

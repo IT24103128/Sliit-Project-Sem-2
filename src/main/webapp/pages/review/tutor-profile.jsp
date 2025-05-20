@@ -73,7 +73,7 @@
     </div>
 
     <h3 style="text-align:center;">Review This Tutor</h3>
-    <form action="<%=request.getContextPath()%>/add-review" method="post">
+    <form action="<%=request.getContextPath()%>/add-review" method="post" class="review-form">
         <input type="hidden" value="<%=user.getID()%>" name="userID">
         <input type="hidden" value="<%=tutor.getID()%>" name="tutorID">
         <textarea name="review" placeholder="Write your review here..."></textarea>
@@ -87,7 +87,7 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class="review-submit-btn">
         </div>
     </form>
 
