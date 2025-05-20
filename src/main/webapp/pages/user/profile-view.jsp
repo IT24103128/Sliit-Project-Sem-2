@@ -58,7 +58,7 @@
             <input type="submit" value="Edit Profile" class="btn-edit">
         </form>
 
-        <form action="<%=request.getContextPath()%>/delete-user-account" method="post" onsubmit="return confirm('Are you sure you want to delete your account?')">
+        <form action="<%=request.getContextPath()%>/unregister-user" method="post" onsubmit="return confirm('Are you sure you want to delete your account?')">
             <input type="hidden" value="<%=currentUser.getID()%>" name="user-id">
             <input type="submit" value="Delete Account" class="btn-remove"/>
         </form>
