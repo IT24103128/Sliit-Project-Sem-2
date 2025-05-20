@@ -1,0 +1,170 @@
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-transparent: rgba(30, 41, 59, 0.9);
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --accent: #60a5fa;
+    --accent-hover: #93c5fd;
+    --border: rgba(148, 163, 184, 0.2);
+    --error: #f87171;
+    --warning: #fbbf24;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h2 {
+    margin: 2rem 0;
+    color: var(--accent);
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.edit-form {
+    background-color: var(--bg-transparent);
+    backdrop-filter: blur(8px);
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+table {
+    width: 100%;
+    margin: 1rem 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    color: var(--accent);
+    font-weight: 500;
+    width: 30%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(77, 184, 255, 0.2);
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    accent-color: var(--accent);
+}
+
+.update-details-btn {
+    background-color: var(--accent);
+    color: #1a2332;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.update-details-btn:hover {
+    background-color: #7ac6ff;
+    transform: translateY(-2px);
+}
+
+.error-message {
+    color: var(--error);
+    font-weight: 500;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    background-color: rgba(255, 107, 107, 0.1);
+    text-align: center;
+}
+
+.success-message {
+    color: var(--success);
+    font-weight: 500;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    background-color: rgba(76, 175, 80, 0.1);
+    text-align: center;
+}
+
+.back-to-login-msg {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.login-msg {
+    font-weight: 500;
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.login-msg a {
+    color: var(--accent);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.login-msg a:hover {
+    color: #7ac6ff;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    form {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    th, td {
+        padding: 8px 10px;
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        padding-top: 1rem;
+        border-bottom: none;
+    }
+
+    td input[type="radio"] {
+        display: inline-block;
+        width: auto;
+    }
+}

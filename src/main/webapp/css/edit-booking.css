@@ -24,33 +24,44 @@ h2 {
     margin-top: 40px;
     color: var(--accent);
     text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
 }
 
-.payment-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px auto;
-    max-width: 600px;
-    padding: 0 20px;
+h1 {
+    color: var(--text-primary);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
 }
 
-form {
+.booking-form {
     background-color: var(--bg-transparent);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
     border: 1px solid var(--border);
     backdrop-filter: blur(5px);
 }
 
+.booking-image {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.booking-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(77, 184, 255, 0.3);
+}
+
 table {
     width: 100%;
-    margin: 15px 0;
+    margin: 20px 0;
     border-collapse: collapse;
 }
 
@@ -63,17 +74,13 @@ th, td {
 th {
     color: var(--text-secondary);
     font-weight: 500;
-    width: 160px;
+    width: 150px;
 }
 
-td strong {
-    color: var(--accent);
-    font-size: 1.1rem;
-}
-
-input[type="month"],
-input[type="password"],
-input[type="text"] {
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="time"] {
     width: 100%;
     padding: 10px 12px;
     background-color: var(--bg-secondary);
@@ -84,20 +91,22 @@ input[type="text"] {
     transition: all 0.3s ease;
 }
 
-input[type="month"]:focus,
-input[type="password"]:focus,
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+input[type="time"]:focus {
     outline: none;
     border-color: var(--accent);
     box-shadow: 0 0 0 2px rgba(77, 184, 255, 0.2);
 }
 
-input::placeholder {
+input[readonly] {
+    background-color: rgba(42, 52, 70, 0.6);
     color: var(--text-secondary);
-    opacity: 0.7;
+    cursor: not-allowed;
 }
 
-.btn-pay {
+.update-details-btn {
     background-color: var(--accent);
     color: var(--bg-primary);
     padding: 12px 25px;
@@ -108,22 +117,19 @@ input::placeholder {
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
-.btn-pay:hover {
+.update-details-btn:hover {
     background-color: #7ac6ff;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 600px) {
-    .payment-container {
-        padding: 0 15px;
-    }
-
+@media (max-width: 650px) {
     form {
         padding: 20px;
+        margin: 20px 15px;
     }
 
     th, td {
@@ -133,22 +139,16 @@ input::placeholder {
 
     th {
         padding-bottom: 5px;
+        border-bottom: none;
     }
 
     td {
         padding-top: 5px;
         padding-bottom: 15px;
     }
-}
 
-input[type="password"] {
-    letter-spacing: 1px;
-}
-
-input[type="month"] {
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b0b0b0'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 12px;
+    .booking-image img {
+        width: 100px;
+        height: 100px;
+    }
 }

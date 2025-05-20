@@ -1,0 +1,225 @@
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-transparent: rgba(30, 41, 59, 0.9);
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --accent: #60a5fa;
+    --accent-hover: #93c5fd;
+    --border: rgba(148, 163, 184, 0.2);
+    --error: #f87171;
+    --warning: #fbbf24;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h2, h3 {
+    color: var(--accent);
+    text-align: center;
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-transparent);
+    margin: 30px auto;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    gap: 2rem;
+    padding: 20px;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(6px);
+}
+
+.p-image-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.p-details {
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.profile h3, .profile p {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+}
+
+.tutor-name {
+    font-weight: bold;
+    color: var(--accent);
+    font-size: 1.3rem;
+}
+
+.attr {
+    font-weight: bold;
+    color: var(--text-secondary);
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: var(--bg-transparent);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(6px);
+}
+
+textarea {
+    min-height: 150px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin: 10px 0;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.3);
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.rating-title {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+select {
+    border-radius: 6px;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.review-submit-btn {
+    background-color: var(--accent);
+    color: #0f172a;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    margin-top: 15px;
+}
+
+.review-submit-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.review-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.review-section h3 {
+    margin-bottom: 20px;
+}
+
+.review {
+    background-color: var(--bg-transparent);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    margin: 15px 0;
+    padding: 15px;
+    backdrop-filter: blur(4px);
+}
+
+.review-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.review-starts {
+    color: var(--warning);
+    font-size: 1.2rem;
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.review-msg {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.review-user {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        padding: 20px;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        margin: 20px 0;
+    }
+
+    .p-details {
+        margin-top: 0;
+        padding: 0;
+    }
+
+    form, .review-section {
+        width: 90%;
+    }
+}

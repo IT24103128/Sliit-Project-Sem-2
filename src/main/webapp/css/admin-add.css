@@ -1,0 +1,159 @@
+:root {
+    --admin-accent: #f87171;
+    --admin-accent-hover: #fca5a5;
+    --admin-accent-light: rgba(248, 113, 113, 0.1);
+    --admin-accent-medium: rgba(248, 113, 113, 0.2);
+    --admin-accent-border: rgba(248, 113, 113, 0.3);
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-transparent: rgba(30, 41, 59, 0.9);
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --border: rgba(148, 163, 184, 0.2);
+    --error: #f87171;
+    --warning: #fbbf24;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h2 {
+    margin: 2rem 0 1.5rem;
+    color: var(--admin-accent);
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
+}
+
+form {
+    background-color: var(--bg-transparent);
+    backdrop-filter: blur(8px);
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    color: var(--admin-accent);
+    font-weight: 500;
+    width: 30%;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--admin-accent);
+    box-shadow: 0 0 0 2px var(--admin-accent-light);
+}
+
+input[type="submit"] {
+    background-color: var(--admin-accent);
+    color: var(--bg-primary);
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--admin-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(248, 113, 113, 0.3);
+}
+
+.error-message {
+    color: var(--error);
+    font-weight: 500;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border-radius: 6px;
+    background-color: rgba(248, 113, 113, 0.15);
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    form {
+        margin: 1rem;
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    th, td {
+        padding: 10px 12px;
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        padding-top: 1.2rem;
+        padding-bottom: 0.5rem;
+        border-bottom: none;
+    }
+
+    td {
+        padding-top: 0.5rem;
+        padding-bottom: 1.2rem;
+    }
+
+    input[type="submit"] {
+        padding: 12px;
+    }
+}
+
+form::before {
+    content: "ADMIN REGISTRATION";
+    display: block;
+    color: var(--admin-accent);
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
