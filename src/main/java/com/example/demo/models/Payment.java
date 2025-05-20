@@ -17,7 +17,7 @@ public class Payment {
         this.amount = amount;
     }
 
-    public int getID() {
+    public int getID()  {
         return ID;
     }
 
