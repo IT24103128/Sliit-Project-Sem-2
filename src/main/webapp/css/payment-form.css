@@ -38,7 +38,7 @@ h2 {
     padding: 0 20px;
 }
 
-form {
+.form-payment {
     background-color: var(--bg-transparent);
     padding: 30px;
     border-radius: 10px;
