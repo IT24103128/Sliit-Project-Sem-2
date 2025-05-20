@@ -5,22 +5,22 @@ import com.example.demo.utils.FileHandler;
 
 import java.util.ArrayList;
 
-public class UserManager {
-    private static ArrayList<User> users = null;   // array list used to stores user objects within user.
-    private static final String fileName = "users.txt";   // file users.txt is used for saving user.
-    private static int ID = 0;  // ID counter tracks the next available user ID
+public class UserManager { // dependency
+    private static ArrayList<User> users = null;           // array list used to stores user objects within user.
+    private static final String fileName = "users.txt";    // file users.txt is used for saving user.
+    private static int ID = 0;                             // ID counter tracks the next available user ID
 
     public static void readUsers() {  /* reads user data from users.txt, and initializes the users list*/
 
-        if (users != null) // exit,If users list is already loaded
+        if (users != null)      // exit,If users list is already loaded
             return;
 
         users = new ArrayList<>();
-        String[] usersDataArr = FileHandler.readFromFile(fileName); // Reads user data from file
-        int userID = 0; // Temporary variable for storing user ID
+        String[] usersDataArr = FileHandler.readFromFile(fileName);   // reads user data from file
+        int userID = 0;          // Temporary variable for storing user ID
 
         for (String userData : usersDataArr) {
-            String[] userDataArr = userData.split(","); // // Split line into fields by comma
+            String[] userDataArr = userData.split(",");    // Split line into fields by comma
             userID = Integer.parseInt(userDataArr[0]);
             String email = userDataArr[1];
             String password = userDataArr[2];
