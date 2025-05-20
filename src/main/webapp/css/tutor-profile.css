@@ -17,7 +17,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    line-height: 1.6;
 }
 
 h2, h3 {
@@ -81,7 +81,7 @@ h2 {
     color: var(--text-secondary);
 }
 
-form {
+.review-form {
     display: flex;
     flex-direction: column;
     max-width: 700px;
@@ -132,7 +132,7 @@ select {
     font-weight: 500;
 }
 
-input[type="submit"] {
+.review-submit-btn {
     background-color: var(--accent);
     color: #0f172a;
     padding: 12px 25px;
@@ -145,7 +145,7 @@ input[type="submit"] {
     margin-top: 15px;
 }
 
-input[type="submit"]:hover {
+.review-submit-btn:hover {
     background-color: var(--accent-hover);
     transform: translateY(-2px);
 }

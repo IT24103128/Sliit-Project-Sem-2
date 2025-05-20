@@ -16,6 +16,7 @@ body {
     color: var(--text-primary);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    line-height: 1.6;
     padding: 0;
 }
 
@@ -84,7 +85,7 @@ th {
     width: 150px;
 }
 
-form {
+.form-booking {
     background-color: var(--bg-transparent);
     padding: 25px;
     border-radius: 10px;
