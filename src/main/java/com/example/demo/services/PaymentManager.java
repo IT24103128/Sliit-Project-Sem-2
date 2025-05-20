@@ -53,6 +53,14 @@ public class PaymentManager {
         FileHandler.writeToFile(fileName, true, payment.toString());
     }
 
+    public static void deletePayment(int id) {
+        Payment findPayment = findPayment(id);
+        if (findPayment != null) {
+            payments.remove(findPayment);
+            savePaymentsToFile();
+        }
+    }
+
     public static void savePaymentsToFile(){
         // Update the file
         String paymentsDetails = "";
