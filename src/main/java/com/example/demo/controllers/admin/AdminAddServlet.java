@@ -14,7 +14,7 @@ public class AdminAddServlet extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String email = request.getParameter("email");
-
+ //get email if already has entered email sent - allready used mas and reasign Admin add page 
         for(Admin admin : AdminManager.getAdmins()) {
             if(admin.getEmail().equals(email)) {
                 HttpSession session = request.getSession();
