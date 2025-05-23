@@ -24,8 +24,34 @@ public class TutorsSortServlet extends HttpServlet {
         if  (visibleTutors == null) {
             visibleTutors = TutorsManager.getTutorsAsArrayList();
         }
-        visibleTutors = (ArrayList<Tutor>)visibleTutors.clone();
-        MergeSort.mergeSort(visibleTutors);
+
+        // Use Merge sort to sort tutors
+        // convert array list to normal array
+        Tutor[] tutorArr = new Tutor[visibleTutors.size()];
+        // insert element in arraylist to array
+        for (int i = 0; i < visibleTutors.size(); i++) {
+            tutorArr[i] = visibleTutors.get(i);
+        }
+
+        System.out.println("Before Sorting"); // print the array before sorting
+        for (Tutor tutor : tutorArr) {
+            System.out.println(tutor.toString());
+        }
+
+        // Sort the array
+        MergeSort.mergeSort(tutorArr, 0, tutorArr.length-1);
+
+        System.out.println("After Sorting");  // print to check sorting worked or not
+        for (Tutor tutor : tutorArr) {
+            System.out.println(tutor.toString());
+        }
+
+        visibleTutors.clear(); // clear old details
+
+        // insert array items to arrayLists
+        for (Tutor tutor : tutorArr) {
+            visibleTutors.add(tutor);
+        }
 
         session.setAttribute("tutors", visibleTutors);
         request.getRequestDispatcher("pages/tutor/user-view.jsp").forward(request, response);
