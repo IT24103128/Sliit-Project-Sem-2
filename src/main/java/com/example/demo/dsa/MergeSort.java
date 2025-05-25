@@ -34,7 +34,7 @@ public class MergeSort {
         }
 
         int leftArrIndex = 0; // to iterate over left Array
-        int rightArrIndex = 0; // to iterate over left Array
+        int rightArrIndex = 0; // to iterate over right Array
         int startIndex = left;
 
         while (leftArrIndex < leftArrSize && rightArrIndex < rightArrSize){
