@@ -38,8 +38,12 @@
 <h2>List of Tutors</h2>
 
 <div class="controls">
-    <form method="get" action="<%=request.getContextPath()%>/sort-tutor">
-        <button type="submit" name="sort" value="expertise" class="btn-sort">Sort by Subject Expertise</button>
+    <form method="get" action="<%=request.getContextPath()%>/sort-tutor-asc">
+        <button type="submit" name="sort" value="expertise" class="btn-sort">Subject Expertise (Low to High)</button>
+    </form>
+
+    <form method="get" action="<%=request.getContextPath()%>/sort-tutor-dsc">
+        <button type="submit" name="sort" value="expertise" class="btn-sort">Subject Expertise (High to Low)</button>
     </form>
 
     <form method="get" action="<%=request.getContextPath()%>/search-tutor">
